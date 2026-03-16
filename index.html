@@ -26,14 +26,15 @@
         <li>
              <a href="https://es.wikipedia.org/wiki/Bosque" target="_blank">
                 Ir a Wikipedia
-            </a>
-            
+            </a>  
+
         </li>
+
+        <li>
             <a href="https://es.pinterest.com/patricia_semper/the-forest/" target="_blank">
                 Ir a Pinterest
-            </a>
-        <li>
-           
+            </a>      
+         
         </li>
     </ul>
 
@@ -43,17 +44,62 @@
     <h2>Multimedia</h2>
 
     <!-- Imagen -->
-    <img src="In the wild.jpg" alt="Mi corazón late más fuerte" width="300">
+    <img src="In the wild.jpg" alt="Imagen: Mi corazón late más fuerte" width="300">
 
     <br><br>
 
     <!-- Video -->
-    <video src="Fungi forest.mp4" alt="Setas en el bosque" controls width="400"></video>
+    <video src="Fungi forest.mp4" alt="Video: Setas en el bosque" controls width="400"></video>
 
     <br><br>
 
     <!-- Audio -->
-    <audio src="Forest nature.mp3" controls></audio>
+    <audio src="Forest nature.mp3" alt="Audio: Sonidos naturaleza" controls></audio>
+
+    <br><br>
+    <!-- Imagen de ejemplo desde un sitio web -->
+    <img src="https://picsum.photos/400/250" alt="Ejemplo de imagen" style="border-radius:12px">
+
+    <section>
+    <h2>Tabla de Atributos HTML</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Atributo</th>
+                <th>Propósito</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>lang="es"</td>
+                <td>Define el idioma principal</td>
+            </tr>
+        </tbody>
+    </table>
+
+</section>
+
+<section>
+    <h2>Formulario de Registro</h2>
+
+    <form action="/procesar.php" method="POST">
+
+        <label for="email">Correo:</label>
+        <input type="email" id="email" required placeholder="tu@email.com">
+
+        <br><br>
+
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" min="18" max="99">
+
+        <br><br>
+
+        <button type="submit">Enviar Registro</button>
+
+    </form>
+</section>
 
 </main>
 
