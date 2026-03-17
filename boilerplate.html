@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mi primer proyecto web profesional - GlassLearn">
+    <meta name="author" content="Tu Nombre">
+    
+    <!-- Open Graph para compartir en redes -->
+    <meta property="og:title" content="Mi Proyecto Web">
+    <meta property="og:description" content="Un proyecto web creado con la guía GlassLearn.">
+    <meta property="og:type" content="website">
+    
+    <title>Mi Proyecto Web | GlassLearn</title>
+    
+    <!-- Fuente moderna (Google Fonts) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    
+    <!-- CSS externo -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        /* Variables del sistema de diseño */
+        :root {
+            --accent: #6d5dfc;
+            --glass-bg: rgba(255,255,255,0.05);
+            --glass-blur: 16px;
+            --font: 'Inter', sans-serif;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        
+        body {
+            font-family: var(--font);
+            background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+            color: #e6edf3;
+            min-height: 100vh;
+        }
+
+        .glass-card {
+            background: var(--glass-bg);
+            backdrop-filter: blur(var(--glass-blur));
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 16px 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- HEADER: Navegación principal -->
+    <header style="padding: 20px 40px; display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid rgba(255,255,255,0.05);">
+        <h1 style="font-size:1.2rem; color:var(--accent);">🚀 Mi Proyecto</h1>
+        <nav>
+            <ul style="list-style:none; display:flex; gap:24px;">
+                <li><a href="#inicio" style="color:#e6edf3; text-decoration:none;">Inicio</a></li>
+                <li><a href="#sobre-mi" style="color:#e6edf3; text-decoration:none;">Sobre Mí</a></li>
+                <li><a href="#contacto" style="color:#e6edf3; text-decoration:none;">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- MAIN: Contenido principal -->
+    <main style="max-width:900px; margin:0 auto; padding:40px 20px;">
+        
+        <section id="inicio">
+            <div class="glass-card">
+                <h2>¡Hola Mundo! 👋</h2>
+                <p>Este es mi primer proyecto web usando HTML, CSS y JavaScript de forma profesional.</p>
+                <button id="btn-greet" onclick="saludar()" style="margin-top:16px; padding:12px 24px; background:var(--accent); border:none; border-radius:8px; color:white; cursor:pointer; font-size:1rem;">
+                    Hacer clic ✨
+                </button>
+                <p id="mensaje" style="margin-top:12px; opacity:0; transition:opacity 0.5s;"></p>
+            </div>
+        </section>
+
+        <section id="sobre-mi" style="margin-top:40px;">
+            <div class="glass-card">
+                <h2>Sobre Mí</h2>
+                <p>Soy aprendiz de programación web. Estoy aprendiendo HTML, CSS y JavaScript con GlassLearn.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer style="text-align:center; padding:24px; border-top:1px solid rgba(255,255,255,0.05); opacity:0.6; font-size:0.85rem;">
+        <p>&copy; 2026 Mi Proyecto Web. Construido con GlassLearn 🚀</p>
+    </footer>
+
+    <!-- JavaScript al final del body -->
+    <script>
+        function saludar() {
+            const msg = document.getElementById('mensaje');
+            const hora = new Date().getHours();
+            const saludo = hora < 12 ? 'Buenos días' : hora < 18 ? 'Buenas tardes' : 'Buenas noches';
+            msg.textContent = saludo + ', ¡bienvenido a la web! 🌐';
+            msg.style.opacity = '1';
+            msg.style.color = '#6d5dfc';
+        }
+
+        // El DOM está listo cuando se ejecuta este script (está al final del body)
+        console.log('✅ HTML, CSS y JS conectados correctamente.');
+    </script>
+
+</body>
+</html>

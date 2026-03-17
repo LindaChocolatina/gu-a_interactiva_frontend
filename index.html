@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Primera Web</title>
+    <title>Mi Segunda Web</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -14,6 +14,8 @@
 </header>
 
 <main>
+
+    <!-- Sección: Introducción -->
     <section>
         <p>
             Este es mi segundo ejercicio creando una página web usando HTML5. 
@@ -21,141 +23,150 @@
             Ahora estoy practicando etiquetas semánticas como header, main y section con la guía interactiva del profesor Miguel.
         </p>
     </section>
-    <h2>Enlaces y Listas</h2>
 
-    <ul>
-        <li>
-             <a href="https://es.wikipedia.org/wiki/Bosque" target="_blank">
-                Ir a Wikipedia
-            </a>  
-
-        </li>
-
-        <li>
-            <a href="https://es.pinterest.com/patricia_semper/the-forest/" target="_blank">
-                Ir a Pinterest
-            </a>      
-         
-        </li>
-    </ul>
-
-</section>
-
-<section>
-    <h2>Multimedia</h2>
-
-    <!-- Imagen -->
-    <figure>
-        <img src="resources/In the wild.jpg" alt="Frase en una pared rodeada de plantas: 'My heart beats louder in the wild places...'" width="300">
-        <figcaption>Mi corazón late más fuerte en los lugares salvajes</figcaption>
-    </figure>
-
-    <!-- Video -->
-    <figure>
-        <video src="resources/Fungi forest.mp4" controls width="400"></video>
-        <figcaption>Setas creciendo en un bosque húmedo</figcaption>
-    </figure>
-
-    <!-- Audio -->
-    <figure>
-        <audio src="resources/Forest nature.mp3" controls></audio>
-        <figcaption>Sonidos de la naturaleza en el bosque</figcaption>
-    </figure>
-
-    <!-- Imagen de ejemplo desde un sitio web -->
-    <img src="https://picsum.photos/400/250" alt="Ejemplo de imagen decorativa aleatoria" style="border-radius:12px">
-
+    <!-- Sección: Enlaces -->
     <section>
-    <h2>Tabla de Atributos HTML</h2>
+        <h2>Enlaces y Listas</h2>
+        <ul>
+            <li>
+                <a href="https://es.wikipedia.org/wiki/Bosque" target="_blank">
+                    Ir a Wikipedia
+                </a>  
+            </li>
 
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Atributo</th>
-                <th>Propósito</th>
-            </tr>
-        </thead>
+            <li>
+                <a href="https://es.pinterest.com/patricia_semper/the-forest/" target="_blank">
+                    Ir a Pinterest
+                </a>      
+            </li>
+        </ul>
+    </section>
 
-        <tbody>
-            <tr>
-                <td>lang="es"</td>
-                <td>Define el idioma principal</td>
-            </tr>
-        </tbody>
-    </table>
+    <!-- Sección: Multimedia -->
+    <section>
+        <h2>Multimedia</h2>
 
-</section>
+        <!-- Imagen -->
+        <figure>
+            <img src="resources/in-the-wild.jpg" alt="Frase en una pared rodeada de plantas: 'My heart beats louder in the wild places...'" width="300">
+            <figcaption>Mi corazón late más fuerte en los lugares salvajes</figcaption>
+        </figure>
 
-<section>
-    <h2>Formulario de Registro</h2>
+        <!-- Video -->
+        <figure>
+            <video src="resources/fungi-forest.mp4" controls width="400"></video>
+            <figcaption>Setas creciendo en un bosque húmedo</figcaption>
+        </figure>
 
-    <form action="/procesar.php" method="POST">
+        <!-- Audio -->
+        <figure>
+            <audio src="resources/forest-nature.mp3" controls></audio>
+            <figcaption>Sonidos de la naturaleza en el bosque</figcaption>
+        </figure>
 
-        <label for="email">Correo:</label>
-        <input type="email" id="email" required placeholder="tu@email.com">
+        <!-- Imagen externa -->
+        <img src="https://picsum.photos/400/250" alt="Imagen decorativa aleatoria" style="border-radius:12px">
+    </section>
 
-        <br><br>
+    <!-- Sección: Tabla -->
+    <section>
+        <h2>Tabla de Atributos HTML</h2>
 
-        <label for="edad">Edad:</label>
-        <input type="number" id="edad" min="18" max="99">
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Atributo</th>
+                    <th>Propósito</th>
+                </tr>
+            </thead>
 
-        <br><br>
+            <tbody>
+                <tr>
+                    <td>lang="es"</td>
+                    <td>Define el idioma principal</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
 
-        <button type="submit">Enviar Registro</button>
+    <!-- Sección: Formulario de Registro -->
+    <section>
+        <h2>Formulario de Registro</h2>
 
-    </form>
-</section>
+        <form action="/procesar.php" method="POST">
 
-<section>
-    <h2>Formulario de Contacto</h2>
+            <label for="email-registro">Correo:</label>
+            <input type="email" id="email-registro" name="email" required placeholder="tu@email.com">
 
-    <form>
+            <br><br>
 
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" required>
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="18" max="99">
 
-        <br><br>
+            <br><br>
 
-        <label for="email">Correo:</label>
-        <input type="email" id="email" required>
+            <button type="submit">Enviar Registro</button>
 
-        <br><br>
-
-        <button type="submit">Enviar</button>
-
-    </form>
-
-</section>
-
-<section>
-    <h2>Botones accesibles</h2>
-    <button aria-label="Buscar en la página">🔍</button>
-    <button aria-label="Agregar a favoritos">❤️</button>
-</section>
-
-<section>
-    <h2>Modal de ejemplo</h2>
-
-    <!-- Botón para abrir el modal -->
-    <button onclick="document.getElementById('miModal').showModal()">
-        Abrir Modal
-    </button>
-
-    <!-- Modal -->
-    <dialog id="miModal" aria-labelledby="tituloModal">
-    <h3 id="tituloModal">Hola 👋</h3>
-        <p>Este es mi primer modal usando HTML5 nativo.</p>
-
-        <!-- Botón para cerrar -->
-        <form method="dialog">
-            <button>Cerrar</button>
         </form>
-    </dialog>
-</section>
+    </section>
 
-<div class="caja">Soy una caja</div>
+    <!-- Sección: Formulario de Contacto -->
+    <section>
+        <h2>Formulario de Contacto</h2>
+
+        <form>
+
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <br><br>
+
+            <label for="email-contacto">Correo:</label>
+            <input type="email" id="email-contacto" name="email" required>
+
+            <br><br>
+
+            <button type="submit">Enviar</button>
+
+        </form>
+    </section>
+
+    <!-- Sección: Botones accesibles -->
+    <section>
+        <h2>Botones accesibles</h2>
+        <button aria-label="Buscar en la página">🔍</button>
+        <button aria-label="Agregar a favoritos">❤️</button>
+    </section>
+
+    <!-- Sección: Modal -->
+    <section>
+        <h2>Modal de ejemplo</h2>
+
+        <!-- Botón para abrir -->
+        <button onclick="document.getElementById('miModal').showModal()">
+            Abrir Modal
+        </button>
+
+        <!-- Modal -->
+        <dialog id="miModal" aria-labelledby="tituloModal">
+            <h3 id="tituloModal">Hola 👋</h3>
+            <p>Este es mi primer modal usando HTML5 nativo.</p>
+
+            <!-- Botón cerrar -->
+            <form method="dialog">
+                <button>Cerrar</button>
+            </form>
+        </dialog>
+    </section>
+
+    <!-- Caja CSS -->
+    <div class="caja">Soy una caja</div>
 
 </main>
+
+<footer>
+    <p>© 2026 Mi web - Practicando HTML y CSS 🚀</p>
+</footer>
 
 </body>
 </html>
