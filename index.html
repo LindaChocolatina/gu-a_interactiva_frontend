@@ -132,6 +132,26 @@
     <button aria-label="Agregar a favoritos">❤️</button>
 </section>
 
+<section>
+    <h2>Modal de ejemplo</h2>
+
+    <!-- Botón para abrir el modal -->
+    <button onclick="document.getElementById('miModal').showModal()">
+        Abrir Modal
+    </button>
+
+    <!-- Modal -->
+    <dialog id="miModal" aria-labelledby="tituloModal">
+    <h3 id="tituloModal">Hola 👋</h3>
+        <p>Este es mi primer modal usando HTML5 nativo.</p>
+
+        <!-- Botón para cerrar -->
+        <form method="dialog">
+            <button>Cerrar</button>
+        </form>
+    </dialog>
+</section>
+
 </main>
 
 </body>
