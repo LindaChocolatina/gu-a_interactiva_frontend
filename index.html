@@ -1,27 +1,73 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- Configuración básica -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO -->
+    <meta name="description" content="Proyecto web de aprendizaje en HTML, CSS y JavaScript con enfoque en accesibilidad, multimedia y diseño.">
+    <meta name="author" content="Linda Corin Carrillo Méndez">
+
+    <!-- Open Graph (redes sociales) -->
+    <meta property="og:title" content="Mi Segunda Web">
+    <meta property="og:description" content="Aprendiendo desarrollo frontend con HTML, CSS y JavaScript.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://picsum.photos/800/400">
+    <meta property="og:url" content="https://tusitio.com">
+
     <title>Mi Segunda Web</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <header>
-    <h1>Mi segunda web</h1>
+    <h1>Mi Segunda Web</h1>
+
+    <!-- NAV -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#multimedia">Multimedia</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
 </header>
 
-<main>
+<main id="inicio">
 
     <!-- Sección: Introducción -->
     <section>
+        <h2>Sobre mí</h2>
+
+        <article>
         <p>
             Este es mi segundo ejercicio creando una página web usando HTML5. 
             Mi primera web es un blog llamado "Sobreviviendo a las vacaciones" que hice como tarea de vacaciones que nos dejó el profesor Julio.
             Ahora estoy practicando etiquetas semánticas como header, main y section con la guía interactiva del profesor Miguel.
         </p>
+
+        <h2>Mi proceso de aprendizaje</h2>
+        <p>
+            Estoy aprendiendo a estructurar mejor mi contenido usando etiquetas semánticas. 
+            Me gusta mucho la idea de usar sections para organizar diferentes partes de mi página, como enlaces, multimedia y formularios.
+            También estoy experimentando con tablas para mostrar información de manera más clara.
+        </p>
+        <h3>Actualidad</h3>
+
+        <p>
+            Actualmente estoy enfocada en aprender HTML5 y CSS para poder crear páginas web más atractivas y funcionales. 
+            Mi objetivo es seguir practicando y eventualmente aprender JavaScript para agregar interactividad a mis proyectos.  
+            También me gustaría aprender sobre accesibilidad web para asegurarme de que mis páginas sean inclusivas para todos los usuarios
+            y mejorar mis habilidades en diseño web para crear interfaces más atractivas y fáciles de usar, por esa razón quiero aprender a usar 
+            herramientas como Figma o Adobe XD para diseñar prototipos antes de codificar. Me interesaría trabajar en la experiencia del usuario (UX) 
+            y la interfaz de usuario (UI) para crear sitios web que no solo sean funcionales, sino también agradables de usar. Además quiero que todo mi 
+            aprendizaje me ayude a en el desarrollo de productos digitales que sean útiles y atractivos para los usuarios, y que me permitan crecer profesionalmente en el campo del desarrollo web.
+        </p>
+        </article>
     </section>
 
     <!-- Sección: Enlaces -->
@@ -59,7 +105,7 @@
                 <source src="resources/fungi-forest.webm" type="video/webm">
                 Tu navegador no soporta video.
             </video>
-            <figcaption>Setas creciendo en un bosque húmedo</figcaption>
+            <figcaption>Setas creciendo en un bosque</figcaption>
         </figure>
 
         <!-- Audio -->
@@ -87,7 +133,7 @@
 
     <figure>
         <img src="resources/wild-flowers.webp" alt="Montañas" loading="lazy" width="300">
-        <figcaption>Flores silvestres de colores distintos</figcaption>
+        <figcaption>Flores silvestres de distintos colores</figcaption>
     </figure>
 
 </section>
@@ -111,27 +157,6 @@
                 </tr>
             </tbody>
         </table>
-    </section>
-
-    <!-- Sección: Formulario de Registro -->
-    <section>
-        <h2>Formulario de Registro</h2>
-
-        <form action="/procesar.php" method="POST">
-
-            <label for="email-registro">Correo:</label>
-            <input type="email" id="email-registro" name="email" required placeholder="tu@email.com">
-
-            <br><br>
-
-            <label for="edad">Edad:</label>
-            <input type="number" id="edad" name="edad" min="18" max="99">
-
-            <br><br>
-
-            <button type="submit">Enviar Registro</button>
-
-        </form>
     </section>
 
     <!-- Sección: Formulario de Contacto -->
@@ -186,11 +211,106 @@
     <!-- Caja CSS -->
     <div class="caja">Soy una caja</div>
 
+    <section>
+    <h2>Guía de Proceso SENA</h2>
+
+    <ol>
+        <li>Registro en la plataforma</li>
+        <li>Inscripción al programa</li>
+        <li>Proceso de selección
+            <ul>
+                <li>Prueba técnica</li>
+                <li>Entrevista</li>
+            </ul>
+        </li>
+        <li>Matrícula</li>
+    </ol>
+</section>
+
+<section>
+    <h2>Matriz de Competencias</h2>
+
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Competencia</th>
+                <th>Nivel</th>
+                <th>Estado</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+                <td>HTML</td>
+                <td>Básico</td>
+                <td>En proceso</td>
+            </tr>
+
+            <tr>
+                <td>CSS</td>
+                <td>Inicial</td>
+                <td>Aprendiendo</td>
+            </tr>
+
+            <tr>
+                <td>JavaScript</td>
+                <td>Introductorio</td>
+                <td>Pendiente</td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+
+<section>
+    <h2>Formulario de Registro</h2>
+
+    <form action="/procesar.php" method="POST">
+
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <!-- Nombre -->
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <br><br>
+
+            <!-- Correo -->
+            <label for="email-registro">Correo:</label>
+            <input type="email" id="email-registro" name="email" required placeholder="tu@email.com">
+
+            <br><br>
+
+            <!-- Edad -->
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" min="18" max="99" required>
+
+            <br><br>
+
+            <!-- Contraseña -->
+            <label for="password">Contraseña:</label>
+            <input type="password" id="password" name="password" required minlength="6">
+
+            <br><br>
+
+            <!-- Fecha -->
+            <label for="fecha">Fecha de nacimiento:</label>
+            <input type="date" id="fecha" name="fecha">
+
+        </fieldset>
+
+        <br>
+
+        <button type="submit">Enviar Registro</button>
+
+    </form>
+</section>
+
 </main>
 
 <footer>
     <p>© 2026 Mi web - Practicando HTML y CSS 🚀</p>
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>

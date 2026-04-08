@@ -1,0 +1,9 @@
+# Informe de Accesibilidad
+
+El uso de etiquetas semánticas en HTML mejora la accesibilidad de una página web, ya que proporciona significado estructural al contenido.
+
+Etiquetas como <header>, <nav>, <main> y <footer> permiten que los lectores de pantalla interpreten correctamente la organización de la página, facilitando la navegación para personas con discapacidad visual.
+
+Además, estas etiquetas ayudan a mejorar la experiencia del usuario y el posicionamiento en buscadores (SEO), ya que los motores de búsqueda entienden mejor el contenido.
+
+En conclusión, el uso de HTML semántico no solo mejora la estructura del código, sino que también garantiza que la web sea más inclusiva y accesible para todos los usuarios.
